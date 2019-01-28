@@ -16,7 +16,8 @@ files.forEach(file => {
     templates.push(
       new HtmlWebpackPlugin({
         template: dir + '/' + filename + '.pug',
-        filename: filename + '.html'
+        filename: filename + '.html',
+        inject: false
       })
     );
   }
