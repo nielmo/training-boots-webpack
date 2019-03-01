@@ -51,10 +51,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|gif)$/,
         use: [
-          'url-loader'
-        ],
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: "../img/banner/[name].[ext]"
+            }
+          }
+        ]
       }
     ]
   },
