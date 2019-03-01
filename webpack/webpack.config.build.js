@@ -57,7 +57,8 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: "../img/banner/[name].[ext]"
+              name: "../[path][name].[ext]",
+              context: 'src'
             }
           }
         ]
